@@ -14,7 +14,7 @@ after_success:
     - docker build -t notaginat93/multi-server ./server
     - docker build -t notaginat93/multi-woker ./worker
     #Login to the Docker CLI
-    -echo $DOCKER_PASSWORD | docker login -u "$DOCKER_ID" --password-stdin
+    - echo $DOCKER_PASSWORD | docker login -u "$DOCKER_ID" --password-stdin
 
     #Take those images and push those to Docker hub
     - docker push notagiant93/multi-client
